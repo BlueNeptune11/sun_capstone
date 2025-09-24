@@ -2,7 +2,7 @@
 
 - __Authors__: Nathan Besch, Laura Hayes, Caitríona M. Jackman
 
-This is the codebase for my capstone project on the Solar Wind using in-situ data from Nasa Parker Space Probe and ESA Solar Orbiter (SO).
+This is the codebase for my capstone project on Solar Wind Variability using [in-situ data from Nasa's Parker Solar Probe (PSP) and Advanced Composition Explorer (ACE) as well as ESA's Solar Orbiter (SO)]( https://cdaweb.gsfc.nasa.gov/sp_phys/data/).
 
 ## Installation Steps (recommended)
 
