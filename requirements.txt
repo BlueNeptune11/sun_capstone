@@ -2,5 +2,6 @@ ipykernel
 numpy
 matplotlib
 pandas
+scipy
 astropy
 sunpy[all]
