@@ -57,9 +57,9 @@ def download_sc_dataset(sc_name, ds_type, time_window):
         ds_name = 'SOLO_L2_SWA-PAS-GRND-MOM'
 
     if sc_name == 'ace' and ds_type == 'mag':
-        ds_name = 'AC_H3_MFI'
+        ds_name = 'AC_H2_MFI'
     elif sc_name == 'ace' and ds_type == 'sw':
-        ds_name = 'AC_H0_SWE'
+        ds_name = 'AC_H2_SWE'
     
     # Unpack time window
     tstart, tend = parse_time(time_window[0]), parse_time(time_window[1])
@@ -127,3 +127,17 @@ def get_trajectory(timeseries_df, sc_name):
     sc_trajectory_hgs = sc_traj.heliographic_stonyhurst
 
     return sc_trajectory_hgs, obstime
+
+def bin_distance(ds, counts=10):
+    """Get SC params median and stdev binned by distance from a dataset.
+    """
+    # Create bins
+    bins = np.arange(0, 1 + 1/counts, 1/counts)
+    #bins = np.arange(-0.025, 1 + 1/20, 1/20) # centered on 0.05 AU
+    ds['distance_bin'] = pd.cut(ds['Distance'], bins)
+
+    # Group by distance bins and compute median, min, max
+    sc_dist_med = ds.groupby('distance_bin', observed=False).median().reset_index()
+    sc_dist_std = ds.groupby('distance_bin', observed=False).std().reset_index()
+
+    return sc_dist_med, sc_dist_std
