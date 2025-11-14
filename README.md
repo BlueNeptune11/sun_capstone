@@ -23,11 +23,11 @@ pip install -r requirements.txt
 
 This repositroy includes:
 
--Exploratory Notebook showing MAG-RTN and Plasma data comparisons for a short time frame, between Solar Orbiter, Parker Solar Probe and ACE.
--Plot showing SOLO/PSP data coverage w.r.t. solar cycle using sunspot number.
--Notebook detailing how to obtain datasets using SunPy and CDAWeb.
--Notebook analysing fitting of radial relationship power laws (SOLO/PSP data).
--Notebook detailing histogram analysis of different solar wind quantities with case study for edge cases (SOLO/PSP/ACE).
--Notebook looking at a case study for spacecraft alignment (SOLO/PSP).
--Python script for data specific functions.
--Python script for fitting specific functions.
+- Exploratory Notebook showing MAG-RTN and Plasma data comparisons for a short time frame, between Solar Orbiter, Parker Solar Probe and ACE.
+- Plot showing SOLO/PSP data coverage w.r.t. solar cycle using sunspot number.
+- Notebook detailing how to obtain datasets using SunPy and CDAWeb.
+- Notebook analysing fitting of radial relationship power laws (SOLO/PSP data).
+- Notebook detailing histogram analysis of different solar wind quantities with case study for edge cases (SOLO/PSP/ACE).
+- Notebook looking at a case study for spacecraft alignment (SOLO/PSP).
+- Python script for data specific functions.
+- Python script for fitting specific functions.
